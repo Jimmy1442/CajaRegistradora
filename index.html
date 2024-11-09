@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja Registradora</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Caja Registradora</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar productos..." onkeyup="buscarProducto()">
+        </div>
+
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Imagen</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Descuento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Manzanas</td>
+                    <td><img src="/image/Manzana.jpg" alt="Manzanas"></td>
+                    <td>$2,000</td>
+                    <td><input type="number" id="manzanasQty" value="0" min="0"></td>
+                    <td>
+                        <select id="manzanasBonus">
+                            <option value="0">Sin descuento</option>
+                            <option value="0.05">5% Descuento</option>
+                            <option value="0.10">10% Descuento</option>
+                            <option value="0.15">15% Descuento</option>
+                            <option value="0.30">30% Descuento</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pan</td>
+                    <td><img src="/image/pan.jpg" alt="Pan"></td>
+                    <td>$1,500</td>
+                    <td><input type="number" id="panQty" value="0" min="0"></td>
+                    <td>
+                        <select id="panBonus">
+                            <option value="0">Sin descuento</option>
+                            <option value="0.05">5% Descuento</option>
+                            <option value="0.10">10% Descuento</option>
+                            <option value="0.15">15% Descuento</option>
+                            <option value="0.30">30% Descuento</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Leche</td>
+                    <td><img src="/image/leche.jpg" alt="Leche"></td>
+                    <td>$1,000</td>
+                    <td><input type="number" id="lecheQty" value="0" min="0"></td>
+                    <td>
+                        <select id="lecheBonus">
+                            <option value="0">Sin descuento</option>
+                            <option value="0.05">5% Descuento</option>
+                            <option value="0.10">10% Descuento</option>
+                            <option value="0.15">15% Descuento</option>
+                            <option value="0.30">30% Descuento</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Carne</td>
+                    <td><img src="/image/carne.jpg" alt="Carne"></td>
+                    <td>$5,000</td>
+                    <td><input type="number" id="carneQty" value="0" min="0"></td>
+                    <td>
+                        <select id="carneBonus">
+                            <option value="0">Sin descuento</option>
+                            <option value="0.05">5% Descuento</option>
+                            <option value="0.10">10% Descuento</option>
+                            <option value="0.15">15% Descuento</option>
+                            <option value="0.30">30% Descuento</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huevos</td>
+                    <td><img src="/image/huevo.jpg" alt="Huevos"></td>
+                    <td>$3,000</td>
+                    <td><input type="number" id="huevosQty" value="0" min="0"></td>
+                    <td>
+                        <select id="huevosBonus">
+                            <option value="0">Sin descuento</option>
+                            <option value="0.05">5% Descuento</option>
+                            <option value="0.10">10% Descuento</option>
+                            <option value="0.15">15% Descuento</option>
+                            <option value="0.30">30% Descuento</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Queso</td>
+                    <td><img src="/image/queso.jpg" alt="Queso"></td>
+                    <td>$4,000</td>
+                    <td><input type="number" id="quesoQty" value="0" min="0"></td>
+                    <td>
+                        <select id="quesoBonus">
+                            <option value="0">Sin descuento</option>
+                            <option value="0.05">5% Descuento</option>
+                            <option value="0.10">10% Descuento</option>
+                            <option value="0.15">15% Descuento</option>
+                            <option value="0.30">30% Descuento</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Papas</td>
+                    <td><img src="/image/papa.jpg" alt="Papas"></td>
+                    <td>$1,800</td>
+                    <td><input type="number" id="papasQty" value="0" min="0"></td>
+                    <td>
+                        <select id="papasBonus">
+                            <option value="0">Sin descuento</option>
+                            <option value="0.05">5% Descuento</option>
+                            <option value="0.10">10% Descuento</option>
+                            <option value="0.15">15% Descuento</option>
+                            <option value="0.30">30% Descuento</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zanahorias</td>
+                    <td><img src="/image/zanahoria.jpg" alt="Zanahorias"></td>
+                    <td>$2,500</td>
+                    <td><input type="number" id="zanahoriasQty" value="0" min="0"></td>
+                    <td>
+                        <select id="zanahoriasBonus">
+                            <option value="0">Sin descuento</option>
+                            <option value="0.05">5% Descuento</option>
+                            <option value="0.10">10% Descuento</option>
+                            <option value="0.15">15% Descuento</option>
+                            <option value="0.30">30% Descuento</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tomates</td>
+                    <td><img src="/image/tomate.webp" alt="Tomates"></td>
+                    <td>$2,300</td>
+                    <td><input type="number" id="tomatesQty" value="0" min="0"></td>
+                    <td>
+                        <select id="tomatesBonus">
+                            <option value="0">Sin descuento</option>
+                            <option value="0.05">5% Descuento</option>
+                            <option value="0.10">10% Descuento</option>
+                            <option value="0.15">15% Descuento</option>
+                            <option value="0.30">30% Descuento</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Naranjas</td>
+                    <td><img src="/image/naranja.jpg" alt="Naranjas"></td>
+                    <td>$1,900</td>
+                    <td><input type="number" id="naranjasQty" value="0" min="0"></td>
+                    <td>
+                        <select id="naranjasBonus">
+                            <option value="0">Sin descuento</option>
+                            <option value="0.05">5% Descuento</option>
+                            <option value="0.10">10% Descuento</option>
+                            <option value="0.15">15% Descuento</option>
+                            <option value="0.30">30% Descuento</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="botones">
+            <button id="calcularBtn" onclick="calcularTotal()">Calcular Total</button>
+            <button id="comprarBtn" onclick="generarFactura()">Generar Factura</button>
+            <button onclick="limpiarFormulario()">Limpiar</button>
+        </div>
+
+        <div id="detalleCompra"></div>
+
+        <!-- Factura -->
+        <div id="factura" class="factura-container" style="display: none;">
+            <div class="factura-header">
+                <h2>Factura de Compra</h2>
+                <p id="fechaFactura"></p>
+            </div>
+            <table class="factura-detalles">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Valor Unitario</th>
+                        <th>Descuento</th>
+                        <th>Valor Total</th>
+                    </tr>
+                </thead>
+                <tbody id="facturaDetalles">
+                    <!-- Los detalles de los productos se generarán aquí -->
+                </tbody>
+            </table>
+            <div class="factura-footer">
+                <p>Total a pagar: <span id="facturaTotal"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
